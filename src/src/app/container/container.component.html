@@ -1,0 +1,43 @@
+<div class="container">
+	<div class="position">
+		<div class="heading">
+			Center X and Y
+		</div>
+		<div class="input">
+			X: <input type="number" [(ngModel)]="centerX">
+		</div>
+		<div class="input">
+			Y: <input type="number" [(ngModel)]="centerY">
+		</div>
+	</div>
+	<div class="circles">
+		<div class="heading">Number of Circles</div>
+		<div class="input">
+			Y: <input type="number" [(ngModel)]="noOfCircles">
+		</div>
+	</div>
+	<div class="radius">
+		<div class="heading">Radius</div>
+		<div class="input">
+			R: <input type="number" [(ngModel)]="radius">
+		</div>
+	</div>
+	<div class="position">
+		<div class="heading">
+			Amplitude
+		</div>
+		<div class="input">
+			X: <input type="number" [(ngModel)]="ampX">
+		</div>
+		<div class="input">
+			Y: <input type="number" [(ngModel)]="ampY">
+		</div>
+	</div>
+</div>
+
+<svg [attr.height]="height" [attr.width]="width">
+	<svg:g app-waves [centerX]="centerX" [centerY]="centerY" [noOfCircles]="noOfCircles" [radius]="radius" [ampX]="ampX"
+  [ampY]="ampY" />
+</svg>
+
+Currently Selected = {{selected | json}}

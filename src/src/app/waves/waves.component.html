@@ -1,0 +1,7 @@
+<ng-container *ngFor="let circle of circles; let i = index ">
+	<svg:circle [attr.cx]="circle.cx" [attr.cy]="circle.cy" [attr.r]="circle.r"
+  [style]="'fill: none; stroke: blue; stroke-width: 1px;' | safeHtml"
+  (click)="clicked(i)"
+  >
+	</svg:circle>
+</ng-container>
